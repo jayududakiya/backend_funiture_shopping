@@ -4,8 +4,7 @@ const {  addNewOrder, deleteOrder , showAllOrder } = require('../controller/orde
 const { verifyToken } = require('../helper/verifyToken');
 
 orderRoutes.get('/',verifyToken,showAllOrder);
-
-orderRoutes.post('/',verifyToken,addNewOrder);
+orderRoutes.post('/',verifyToken,addNewOrder); // [done]
 orderRoutes.post('/delete',verifyToken,deleteOrder);
 
 module.exports =  orderRoutes;

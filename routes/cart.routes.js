@@ -4,7 +4,7 @@ const { addToCart , deleteToCart , updateToCart , getAllCart } = require('../con
 
 const CartRoutes = express.Router();
 
-CartRoutes.get('/',verifyToken,getAllCart); 
+CartRoutes.get('/',verifyToken,getAllCart);  // []
 
 CartRoutes.post('/',verifyToken,addToCart); // - [Done]
 

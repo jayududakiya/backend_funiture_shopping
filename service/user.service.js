@@ -12,7 +12,7 @@ class userServices  {
         return await User.findOne(body);
     };
     async updateUser (id,updateBody) {
-        return await User.findByIdAndUpdate(id,{$set : {updateBody}} , {new : true});
+        return await User.findByIdAndUpdate(id,{$set : updateBody} , {new : true});
     }
 };
 

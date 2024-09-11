@@ -4,8 +4,9 @@ class cartServices {
     async getOneCart (body) {
         return await Cart.findOne(body);
     }
-    async getAllCart (body) {
-        return await Cart.find(body);
+    async getAllCart (body,populateFiled) {
+        return await Cart.find(body)
+        ?.populate(populateFiled);
     }
     async createCart (body) {
         return await Cart.create(body);

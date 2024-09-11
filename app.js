@@ -15,6 +15,7 @@ app.get('/',(res,req)=>{
     req.send('Welcome To Express Js Furniture-Shopping-App');
 });
 
+// base https://backend-funiture-shopping.onrender.com
 
 const userRoutes = require('./routes/user.routes');
 const productRoutes = require('./routes/products.routes');

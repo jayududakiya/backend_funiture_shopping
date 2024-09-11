@@ -57,11 +57,10 @@ exports.showUserProfile = async (req,res) => {
 
 exports.updateProfile = async (req, res) => {
   try {
-    const file = req.files;
-    console.log('files====',file);
     let user = req.user;
-    const updateData = req.body;
-    user = await userService.updateUser(user._id,updateData);
+    const updateData = req.body; // this is object 
+    
+    user = await userService.updateUser(user._id,updateData); // pass ing here also a object {} 
     return res.status(200).json({message : 'user is Updated',user})
   } catch (error) {
     console.log(error);
