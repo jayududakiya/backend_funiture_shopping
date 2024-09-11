@@ -6,8 +6,8 @@ exports.verifyToken = async (req, res, next) => {
   try {
     
     const authToken = req.headers["authorization"];
-    console.log('sncjasnc',authToken);
-    if (!authToken) return res.status(401).json({ message: "Unauthorised..." });
+    console.log('tokens',authToken);
+    if (!authToken) return res.status(401).json({ message: "Unauthorized..." });
     const token = authToken.split(" ")[1];
     const payload = await jwt.verify(token, process.env.JWT_SEC_KEY);
     const user = await userService.findUser({
