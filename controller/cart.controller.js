@@ -35,7 +35,8 @@ exports.updateToCart = async (req,res) => {
 exports.deleteToCart = async (req,res) => {
   try {
     const cart = await cartService.getOneCart({userId : req.user._id , productId : req.body.productId , isDeleted : false});
-    await cartService.updateCart(cart._id,{isDeleted : true });
+    // await cartService.updateCart(cart._id,{isDeleted : true });
+    await cartService.deleteCart(cart._id);
     res.status(200).json({message : 'Product Was Deleted....',cart});
   } catch (error) {
     console.log(error);

@@ -8,7 +8,7 @@ const { CreateProduct , FindProduct , GetAllProduct, UpdateProduct, DeleteProduc
 
 productsRoutes.get("/",GetAllProduct); // - [Done]
 
-productsRoutes.get("/-q",FindProduct); // -q for find product base on sku field
+productsRoutes.get("/-q",FindProduct); // - [Done]  // -q for find product base on sku field
 
 productsRoutes.post("/",CreateProduct); // - [Done]
 

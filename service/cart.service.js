@@ -15,6 +15,10 @@ class cartServices {
     async updateCart (id,updateBody) {
         return await Cart.findByIdAndUpdate(id,{$set : updateBody } , {new : true})
     };
+
+    async deleteCart (id) {
+        return await Cart.deleteOne({_id:id})
+    };
 };
 
 
