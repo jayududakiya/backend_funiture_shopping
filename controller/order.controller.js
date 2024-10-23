@@ -21,8 +21,9 @@ exports.addNewOrder = async (req,res) => {
         const amount = orderItem.reduce((total,item)=>(total += item.totalAmount),0);
 
         const nweOrder = await orderService.createOrders({userId: req.user._id , items : orderItem ,  totalAmount : amount});
-
-        await Cart.updateMany({userId : req.user._id , isDeleted : true});
+        console.log('newOrder', nweOrder);
+        
+        await cartService.deleteManyCart({userId : req.user._id , isDeleted : false});
 
         return res.status(201).json({message : 'Order Is add ' , nweOrder});
 

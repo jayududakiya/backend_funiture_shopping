@@ -1,5 +1,15 @@
 ## Gating Started FURNITURE SHOPPING APP APIS
 
+<!-- !-------------------------------- Token -------------------------------- -->
+- {
+   "user" : "JAYAN",
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmRlNmI5MTcxNmQ0YjJlMDdiYzQyMjEiLCJpYXQiOjE3MjY4MDE3MjZ9.KLGY9x-2s-tEE3IcjttuxIv6LFDSDbi9YzVfHidJNrI"
+}
+- {
+   "user" : "NIKHIL",
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmUxZGI5NzFmOWMyOGFkMDlmYjVjNmMiLCJpYXQiOjE3MjY4MDM2MjF9.UoJsGUgYDOMlRG6s4HrEd_OMwGOBuPA1JNN58dnQkdU"
+}
+
 1. create All Cured API FOR USERS [working : Done]
 
 - post = '/' => registerUser

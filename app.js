@@ -21,9 +21,11 @@ const userRoutes = require('./routes/user.routes');
 const productRoutes = require('./routes/products.routes');
 const CartRoutes = require('./routes/cart.routes');
 const orderRoutes = require('./routes/order.routes');
+const favoriteRoutes = require('./routes/favorite.routes');
 
 app.use('/api/user',userRoutes);
 app.use('/api/product',productRoutes);  // - [Done]
+app.use('/api/favorite',favoriteRoutes);
 app.use('/api/cart',CartRoutes); // - [Done]
 app.use('/api/order',orderRoutes);
 
